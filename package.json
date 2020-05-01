@@ -14,7 +14,9 @@
     "test": "gulp",
     "start": "node index.js",
     "install": "gulp",
-    "simulate-translations": "s18n map locales/en.json > locales/accents.json"
+    "simulate-translations": "s18n map locales/en.json > locales/accents.json",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": "^0.12.7"
@@ -48,6 +50,8 @@
     "mkdirp": "^0.5.1",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.4",
-    "uglify-js": "^2.4.24"
-  }
+    "uglify-js": "^2.4.24",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
