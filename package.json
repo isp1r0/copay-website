@@ -14,7 +14,9 @@
     "test": "gulp",
     "start": "node index.js",
     "install": "gulp",
-    "simulate-translations": "s18n map locales/en.json > locales/accents.json"
+    "simulate-translations": "s18n map locales/en.json > locales/accents.json",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "engines": {
     "node": "^0.12.7"
@@ -27,19 +29,19 @@
     "express": "^4.13.3",
     "express-error-handler": "^1.0.1",
     "globby": "^3.0.1",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.0.2",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-cached": "^1.1.0",
-    "gulp-csso": "^1.0.0",
+    "gulp-csso": "^3.0.0",
     "gulp-if": "^2.0.0",
     "gulp-jade": "^1.1.0",
     "gulp-jscs": "^3.0.1",
-    "gulp-jshint": "^1.11.2",
+    "gulp-jshint": "^2.0.3",
     "gulp-l10n": "1.2.0",
     "gulp-load-plugins": "^1.0.0",
     "gulp-plumber": "^1.0.1",
-    "gulp-rev-all": "^0.8.21",
-    "gulp-sass": "^2.0.4",
+    "gulp-rev-all": "^3.0.0",
+    "gulp-sass": "^5.0.0",
     "gulp-sass-lint": "^1.0.1",
     "gulp-size": "^2.0.0",
     "gulp-sourcemaps": "^1.6.0",
@@ -48,6 +50,8 @@
     "mkdirp": "^0.5.1",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.4",
-    "uglify-js": "^2.4.24"
-  }
+    "uglify-js": "^3.14.3",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
